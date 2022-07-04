@@ -1,0 +1,10 @@
+.category {
+  display: flex;
+  flex-direction: column;
+  margin-top: 220px;
+  list-style: none;
+  color: #59a592;
+	font-weight: 500;
+  position: fixed;
+  z-index: 10;
+}

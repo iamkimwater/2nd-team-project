@@ -1,0 +1,13 @@
+.section {
+	padding: 100px;
+  height: 100vh;
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  align-items: center;
+}
+
+.arrow-drop-up-icon {
+  font-size: 36px;
+  cursor: pointer;
+}

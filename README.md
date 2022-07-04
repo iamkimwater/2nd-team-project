@@ -1,2 +1,1 @@
-# 2nd Team Project
-## 업로드 예정
+# Elice 4th AI Track - 2nd Team Project

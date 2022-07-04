@@ -1,0 +1,599 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Test_API",
+    "description": "Swagger API 명세서 작성방법",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:5001/",
+      "description": "swagger"
+    }
+  ],
+  "paths": {
+    "/users": {
+      "post": {
+        "summary": "회원가입",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/users_body"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/login": {
+      "post": {
+        "summary": "로그인",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/login_body"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/logout": {
+      "post": {
+        "summary": "로그아웃",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/users/{id}": {
+      "get": {
+        "summary": "유저 정보 조회",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "patch": {
+        "summary": "닉네임 변경",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/user_id_body"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/profile": {
+      "post": {
+        "summary": "프로필 업로드",
+        "requestBody": {
+          "content": {
+            "application/octet-stream": {
+              "schema": {
+                "$ref": "#/components/schemas/profile_body"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/postings/posting": {
+      "post": {
+        "summary": "게시글 작성",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/posting_body"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/postings/{postings_id}": {
+      "get": {
+        "summary": "작성한 게시글 조회",
+        "parameters": [
+          {
+            "name": "postings_id",
+            "in": "path",
+            "description": "The Id of the user to return",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "summary": "게시글 수정",
+        "parameters": [
+          {
+            "name": "postings_id",
+            "in": "path",
+            "description": "The Id of the user to return",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/posting_body"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "summary": "게시글 삭제",
+        "parameters": [
+          {
+            "name": "postings_id",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/{postings_id}/comments/comment": {
+      "post": {
+        "summary": "댓글 작성",
+        "parameters": [
+          {
+            "name": "postings_id",
+            "in": "path",
+            "description": "The Id of the user to return",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/comment_body"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/postings/{postings_id}/comments/{comments_id}": {
+      "get": {
+        "summary": "댓글 조회",
+        "parameters": [
+          {
+            "name": "postings_id",
+            "in": "path",
+            "description": "The Id of the user to return",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "comments_id",
+            "in": "path",
+            "description": "The Id of the user to return",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "summary": "댓글 수정",
+        "parameters": [
+          {
+            "name": "postings_id",
+            "in": "path",
+            "description": "The Id of the user to return",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "comments_id",
+            "in": "path",
+            "description": "The Id of the user to return",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/comment_body"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "summary": "댓글 삭제",
+        "parameters": [
+          {
+            "name": "postings_id",
+            "in": "path",
+            "description": "The Id of the user to return",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "comments_id",
+            "in": "path",
+            "description": "The Id of the user to return",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/postings/{postings_id}/comments/": {
+      "get": {
+        "summary": "해당 게시물에 달린 모든댓글 조회 ",
+        "parameters": [
+          {
+            "name": "postings_id",
+            "in": "path",
+            "description": "The Id of the user to return",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/postings/{postings_id}/like": {
+      "post": {
+        "summary": "좋아요!",
+        "parameters": [
+          {
+            "name": "postings_id",
+            "in": "path",
+            "description": "The Id of the user to return",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "summary": "좋아요 취소",
+        "parameters": [
+          {
+            "name": "postings_id",
+            "in": "path",
+            "description": "The Id of the user to return",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/postingList": {
+      "get": {
+        "summary": "게시물 전체 조회",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/postings/{users_id}/like_postings": {
+      "get": {
+        "summary": "사용자가 좋아요 누른 게시물 ",
+        "parameters": [
+          {
+            "name": "users_id",
+            "in": "path",
+            "description": "The Id of the user to return",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/postings/{users_id}/postings": {
+      "get": {
+        "summary": "사용자가 작성한 게시물 ",
+        "parameters": [
+          {
+            "name": "users_id",
+            "in": "path",
+            "description": "The Id of the user to return",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "users_body": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string"
+          },
+          "password": {
+            "type": "string"
+          },
+          "nickname": {
+            "type": "string"
+          },
+          "is_vegan": {
+            "type": "boolean"
+          },
+          "is_deleted": {
+            "type": "boolean"
+          },
+          "description": {
+            "type": "string"
+          }
+        },
+        "example": {
+          "email": "string",
+          "password": "string",
+          "nickname": "string",
+          "is_vegan": true,
+          "is_deleted": true,
+          "description": "null"
+        }
+      },
+      "login_body": {
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string"
+          },
+          "password": {
+            "type": "string"
+          }
+        },
+        "example": {
+          "email": "string",
+          "password": "string"
+        }
+      },
+      "user_id_body": {
+        "type": "object",
+        "properties": {
+          "nickname": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        },
+        "example": {
+          "nickname": "string",
+          "description": "string"
+        }
+      },
+      "profile_body": {
+        "properties": {
+          "image": {
+            "type": "string",
+            "format": "binary"
+          }
+        }
+      },
+      "posting_body": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "users_id": {
+            "type": "string"
+          },
+          "article": {
+            "type": "string"
+          },
+          "file_url": {
+            "type": "string"
+          }
+        },
+        "example": {
+          "article": "string",
+          "file_url": "string"
+        }
+      },
+      "comment_body": {
+        "type": "object",
+        "properties": {
+          "users_id": {
+            "type": "string"
+          },
+          "content": {
+            "type": "string"
+          }
+        },
+        "example": {
+          "content": "string"
+        }
+      }
+    }
+  }
+}
