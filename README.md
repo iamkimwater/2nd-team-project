@@ -3,10 +3,10 @@
 <br>
 
 <p align="center">
-	<img style="border:solid" width="30%" alt="elice@2x" src="https://user-images.githubusercontent.com/97582839/177148531-741ba76e-6ada-4d9c-a5f6-1a494c6e7efd.png">
+	<img width="30%" src="https://user-images.githubusercontent.com/97582839/177148531-741ba76e-6ada-4d9c-a5f6-1a494c6e7efd.png">
 </p>
 <p align="center">
-	<img style="border:solid" width="30%" src="https://user-images.githubusercontent.com/97582839/177287961-7545d198-6e22-4f97-9944-2927f42b18df.png">
+	<img width="30%" src="https://user-images.githubusercontent.com/97582839/177287961-7545d198-6e22-4f97-9944-2927f42b18df.png">
 </p>
 
 <br>
