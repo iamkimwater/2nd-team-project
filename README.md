@@ -2,39 +2,14 @@
 
 <br>
 
-<style>
-	.logo {
-    width: 60%;
-    margin: 10px auto;
-    display: flex;
-	}
-
-	.elice {
-			border: 1px;
-			flex: 2;
-			width: 30%;
-			box-sizing: border-box;
-	}
-
-	.begin_a_vegan {
-			border: 1px;
-			flex: 1;
-			margin: 0px 5%;
-			width: 30%;
-			box-sizing: border-box;
-	}
-</style>
-
-<body>
-	<div class="logo">
-		<div class="elice">
-			<img src="https://user-images.githubusercontent.com/97582839/177148531-741ba76e-6ada-4d9c-a5f6-1a494c6e7efd.png">
-		</div>
-		<div class="begin_a_vegan">
-			<img src="https://user-images.githubusercontent.com/97582839/177287961-7545d198-6e22-4f97-9944-2927f42b18df.png">
-		</div>
+<div style="display: flex; width: 60%; margin: 10px auto;">
+	<div style="border: 1px; flex: 2; width: 30%; box-sizing: border-box;">
+		<img src="https://user-images.githubusercontent.com/97582839/177148531-741ba76e-6ada-4d9c-a5f6-1a494c6e7efd.png">
 	</div>
-</body>
+	<div style="border: 1px; flex: 1; margin: 0px 5%; width: 30%; box-sizing: border-box;">
+		<img src="https://user-images.githubusercontent.com/97582839/177287961-7545d198-6e22-4f97-9944-2927f42b18df.png">
+	</div>
+</div>
 
 <br>
 
