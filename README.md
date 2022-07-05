@@ -23,7 +23,7 @@
 		- 1주차 : Ideate & Prototype
 			- 자유 주제 선정 및 데이터셋 탐색
 			- 프로토타입 구현
-		- 2주차 : BUILD & ITERATE
+		- 2주차 : Build & Iterate
 			- 개발 및 데이터 분석 병행
 			- 지속적인 데이터 분석 결과에 따라서 애자일하게 구현 기능을 추가
 		- 3주차 : Iterate & Deploy
