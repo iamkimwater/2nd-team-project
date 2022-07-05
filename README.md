@@ -10,14 +10,14 @@
 	}
 
 	.elice {
-			border: 1px solid white;
+			border: 1px;
 			flex: 2;
 			width: 30%;
 			box-sizing: border-box;
 	}
 
 	.begin_a_vegan {
-			border: 1px solid white;
+			border: 1px;
 			flex: 1;
 			margin: 0px 5%;
 			width: 30%;
