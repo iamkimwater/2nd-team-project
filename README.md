@@ -1,13 +1,9 @@
 # **데이터 분석 웹 서비스 프로젝트**
 
-<br>
-
 <p align="center">
 	<img src="https://user-images.githubusercontent.com/97582839/177148531-741ba76e-6ada-4d9c-a5f6-1a494c6e7efd.png" align="center" width="30%">
 	<img src="https://user-images.githubusercontent.com/97582839/177287961-7545d198-6e22-4f97-9944-2927f42b18df.png" align="center" width="30%">
 </p>
-
-<br>
 
 ## **포지션**
 > `Front-end` / `My Page 구현`
